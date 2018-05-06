@@ -10,8 +10,21 @@ import UIKit
 
 class ConcentrationThemeViewController: UIViewController, UISplitViewControllerDelegate{
     
+    //MARK:- View Functions
+    override func awakeFromNib() {
+        splitViewController?.delegate = self
+    }
+    
+    //MARK:- Outlets
     @IBOutlet private var themeChooserButtons: [UIButton]!
     
+    //MARK:- Actions
+    @IBAction func buttonPressed(_ sender: UIButton) {
+        gameNumber = sender.tag
+        goToGame()
+    }
+    
+    //MARK:- Variables
     private var gameNumber: Int?
     private var lastSeguaeToController: ConcentrationViewController?
     
@@ -19,22 +32,9 @@ class ConcentrationThemeViewController: UIViewController, UISplitViewControllerD
         return splitViewController?.viewControllers.last as? ConcentrationViewController
     }
     
-    override func awakeFromNib() {
-        splitViewController?.delegate = self
-    }
     
-    func splitViewController(_ splitViewController: UISplitViewController, collapseSecondary secondaryViewController: UIViewController, onto primaryViewController: UIViewController) -> Bool {
-        if let cvc = secondaryViewController as? ConcentrationViewController{
-            if cvc.theme == nil{
-                return true
-            }
-        }
-        return false
-    }
-    
-    @IBAction func buttonPressed(_ sender: UIButton) {
-        gameNumber = sender.tag == 5 ? nil : sender.tag
-        
+    //MARK:- Private Funtions
+    private func goToGame(){
         if let currentGame = splitViewDetailConcentrationViewController{
             currentGame.theme = gameNumber
             currentGame.resetFromOtherVC()
@@ -53,9 +53,19 @@ class ConcentrationThemeViewController: UIViewController, UISplitViewControllerD
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "chooseATheme"{
             if let destination = segue.destination as? ConcentrationViewController{
-                destination.theme = gameNumber ?? nil
+                destination.theme = gameNumber ?? 5
                 lastSeguaeToController = destination
             }
         }
     }
+    
+    func splitViewController(_ splitViewController: UISplitViewController, collapseSecondary secondaryViewController: UIViewController, onto primaryViewController: UIViewController) -> Bool {
+        if let cvc = secondaryViewController as? ConcentrationViewController{
+            if cvc.theme == nil{
+                return true
+            }
+        }
+        return false
+    }
+
 }

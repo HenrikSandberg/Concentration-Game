@@ -70,7 +70,6 @@ class ConcentrationViewController: UIViewController {
         game = Concentration(numberOfPairsOfCards: numberOfPairsOfCards)
         updateViewFromModel()
         flips = 0
-        updateFlipCountLbl()
     }
     
     private func isGameOver() -> Bool{
@@ -85,6 +84,7 @@ class ConcentrationViewController: UIViewController {
                     button.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
                 }
             }
+            playAgainButton.setTitleColor(strokeArray[strokeColor], for: .normal)
         }
         return game.isGameOver
     }
@@ -105,6 +105,7 @@ class ConcentrationViewController: UIViewController {
                 }
                 playAgainButton.isHidden = !isGameOver()
             }
+            updateFlipCountLbl()
         }
     }
     
@@ -121,14 +122,14 @@ class ConcentrationViewController: UIViewController {
     //MARK:- Public API
     var theme: Int?{
         didSet{
+            if theme == 5 {theme = emojiArray.count.arc4Randum}
+            
             emojiChoices = emojiArray[theme ?? emojiArray.count.arc4Randum]
             emoji = [:]
             
             strokeColor = strokeArray.count.arc4Randum
-            playAgainButton.setTitleColor(strokeArray[strokeColor], for: .normal)
             
             updateViewFromModel()
-            updateFlipCountLbl()
         }
     }
     
