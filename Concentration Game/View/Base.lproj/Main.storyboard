@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14111" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="CdS-DR-znN">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14112" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="CdS-DR-znN">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -181,7 +181,7 @@
                                 </subviews>
                             </stackView>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Pl-fn-Jf3">
-                                <rect key="frame" x="89" y="701.66666666666663" width="197" height="41"/>
+                                <rect key="frame" x="89" y="702" width="197" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <color key="tintColor" red="0.0" green="0.99143940210000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Play Again?">
@@ -207,23 +207,23 @@
                     </view>
                     <connections>
                         <outlet property="flipLbl" destination="7PV-cF-yoa" id="HgH-vo-rWp"/>
-                        <outlet property="playAgainbtn" destination="6Pl-fn-Jf3" id="1k2-T7-cZm"/>
-                        <outletCollection property="btnArray" destination="sho-Cl-eo4" collectionClass="NSMutableArray" id="Jbi-1k-uSO"/>
-                        <outletCollection property="btnArray" destination="ITC-so-qHl" collectionClass="NSMutableArray" id="DTI-rK-Wn2"/>
-                        <outletCollection property="btnArray" destination="ePB-zJ-H70" collectionClass="NSMutableArray" id="Y1r-x9-gaP"/>
-                        <outletCollection property="btnArray" destination="OZ4-h3-iZf" collectionClass="NSMutableArray" id="mvg-lE-x6N"/>
-                        <outletCollection property="btnArray" destination="BOz-dl-ZWe" collectionClass="NSMutableArray" id="kSY-Vu-4uT"/>
-                        <outletCollection property="btnArray" destination="Yg0-tE-TQg" collectionClass="NSMutableArray" id="IpR-Dv-Dse"/>
-                        <outletCollection property="btnArray" destination="lvB-P1-KOh" collectionClass="NSMutableArray" id="Ofl-G3-EcT"/>
-                        <outletCollection property="btnArray" destination="kij-mO-KM2" collectionClass="NSMutableArray" id="LSU-yV-2qf"/>
-                        <outletCollection property="btnArray" destination="afU-Q5-IYJ" collectionClass="NSMutableArray" id="MOh-IX-tXW"/>
-                        <outletCollection property="btnArray" destination="sEZ-JF-7nd" collectionClass="NSMutableArray" id="Fux-2Q-Rfa"/>
-                        <outletCollection property="btnArray" destination="Tzx-6H-QUw" collectionClass="NSMutableArray" id="br4-5X-ljb"/>
-                        <outletCollection property="btnArray" destination="oWY-8W-SZo" collectionClass="NSMutableArray" id="Ges-Ad-d9Q"/>
-                        <outletCollection property="btnArray" destination="Civ-XS-ucu" collectionClass="NSMutableArray" id="fYR-cn-fEW"/>
-                        <outletCollection property="btnArray" destination="uja-H2-DYY" collectionClass="NSMutableArray" id="B0A-uT-FpG"/>
-                        <outletCollection property="btnArray" destination="Bw7-36-6cj" collectionClass="NSMutableArray" id="Jyr-aD-21l"/>
-                        <outletCollection property="btnArray" destination="bNQ-BF-4kT" collectionClass="NSMutableArray" id="ton-86-uzl"/>
+                        <outlet property="playAgainButton" destination="6Pl-fn-Jf3" id="1k2-T7-cZm"/>
+                        <outletCollection property="arrayOfCardButtons" destination="sho-Cl-eo4" collectionClass="NSMutableArray" id="Jbi-1k-uSO"/>
+                        <outletCollection property="arrayOfCardButtons" destination="ITC-so-qHl" collectionClass="NSMutableArray" id="DTI-rK-Wn2"/>
+                        <outletCollection property="arrayOfCardButtons" destination="ePB-zJ-H70" collectionClass="NSMutableArray" id="Y1r-x9-gaP"/>
+                        <outletCollection property="arrayOfCardButtons" destination="OZ4-h3-iZf" collectionClass="NSMutableArray" id="mvg-lE-x6N"/>
+                        <outletCollection property="arrayOfCardButtons" destination="BOz-dl-ZWe" collectionClass="NSMutableArray" id="kSY-Vu-4uT"/>
+                        <outletCollection property="arrayOfCardButtons" destination="Yg0-tE-TQg" collectionClass="NSMutableArray" id="IpR-Dv-Dse"/>
+                        <outletCollection property="arrayOfCardButtons" destination="lvB-P1-KOh" collectionClass="NSMutableArray" id="Ofl-G3-EcT"/>
+                        <outletCollection property="arrayOfCardButtons" destination="kij-mO-KM2" collectionClass="NSMutableArray" id="LSU-yV-2qf"/>
+                        <outletCollection property="arrayOfCardButtons" destination="afU-Q5-IYJ" collectionClass="NSMutableArray" id="MOh-IX-tXW"/>
+                        <outletCollection property="arrayOfCardButtons" destination="sEZ-JF-7nd" collectionClass="NSMutableArray" id="Fux-2Q-Rfa"/>
+                        <outletCollection property="arrayOfCardButtons" destination="Tzx-6H-QUw" collectionClass="NSMutableArray" id="br4-5X-ljb"/>
+                        <outletCollection property="arrayOfCardButtons" destination="oWY-8W-SZo" collectionClass="NSMutableArray" id="Ges-Ad-d9Q"/>
+                        <outletCollection property="arrayOfCardButtons" destination="Civ-XS-ucu" collectionClass="NSMutableArray" id="fYR-cn-fEW"/>
+                        <outletCollection property="arrayOfCardButtons" destination="uja-H2-DYY" collectionClass="NSMutableArray" id="B0A-uT-FpG"/>
+                        <outletCollection property="arrayOfCardButtons" destination="Bw7-36-6cj" collectionClass="NSMutableArray" id="Jyr-aD-21l"/>
+                        <outletCollection property="arrayOfCardButtons" destination="bNQ-BF-4kT" collectionClass="NSMutableArray" id="ton-86-uzl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
