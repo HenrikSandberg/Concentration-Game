@@ -12,11 +12,11 @@ struct Concentration{
     //MARK: - Variables
     private(set) var cards = [Card]()
    
-    private var indexOfOneAndOnlyFaceUpCard: Int?{
-        get{
+    private var indexOfOneAndOnlyFaceUpCard: Int? {
+        get {
             return cards.indices.filter{ cards[$0].isFaceUp}.oneAndOnly
         } set {
-            for index in cards.indices{
+            for index in cards.indices {
                 cards[index].isFaceUp = (index == newValue)
             }
         }
@@ -26,10 +26,10 @@ struct Concentration{
     private mutating func randumize(){
         var cardsLookLike = [Card]()
         
-        while cards.count > 0 {
-            let selectRandumCard = cards.remove(at: Int(arc4random_uniform(UInt32(cards.count))))
+        repeat {
+            let selectRandumCard = cards.remove(at: cards.count.arc4Randum)
             cardsLookLike.append(selectRandumCard)
-        }
+        } while cards.count > 0
         
         cards = cardsLookLike
     }
@@ -37,7 +37,7 @@ struct Concentration{
     //MARK: - Public API
     //This has to be public
     mutating func chooseCard(at index: Int){
-        assert(cards.indices.contains(index), "Concentration.chooseCard(at: \(index)): chose index not in the cards")
+        assert(cards.indices.contains(index), "Concentration.chooseCard(at: \(index)): chosen index not in the cards")
         
         if !cards[index].isMatched {
             if let matchIndex = indexOfOneAndOnlyFaceUpCard, matchIndex != index {
@@ -47,10 +47,10 @@ struct Concentration{
                     cards[matchIndex].isMatched = true
                     cards[index].isMatched = true
                 }
+                
                 cards[index].isFaceUp = true
             } else {
                 indexOfOneAndOnlyFaceUpCard = index
-                
             }
         }
     }
@@ -70,31 +70,11 @@ struct Concentration{
     init(numberOfPairsOfCards: Int) {
         assert(numberOfPairsOfCards > 0, "Concentration.init(\(numberOfPairsOfCards)): you must have at least one pair of cards")
         
-        for _ in 0 ..< numberOfPairsOfCards{
+        for _ in 0 ..< numberOfPairsOfCards {
             let card = Card()
             cards += [card, card]
         }
+        
         randumize()
     }
 }
-
-extension Collection {
-    var oneAndOnly: Element? {
-        return count == 1 ? first : nil
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

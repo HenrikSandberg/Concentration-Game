@@ -15,6 +15,7 @@
 		62F2ED68207E995800ED3E63 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62F2ED66207E995800ED3E63 /* Main.storyboard */; };
 		62F2ED6A207E995A00ED3E63 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62F2ED69207E995A00ED3E63 /* Assets.xcassets */; };
 		62F2ED6D207E995A00ED3E63 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62F2ED6B207E995A00ED3E63 /* LaunchScreen.storyboard */; };
+		AF18C8BD233E176400A4B60B /* extensiopns.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF18C8BC233E176400A4B60B /* extensiopns.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		62F2ED69207E995A00ED3E63 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		62F2ED6C207E995A00ED3E63 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		62F2ED6E207E995A00ED3E63 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF18C8BC233E176400A4B60B /* extensiopns.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensiopns.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				62F2ED76207E997700ED3E63 /* Model */,
 				62F2ED75207E997100ED3E63 /* View */,
 				62F2ED74207E996800ED3E63 /* Controller */,
+				AF18C8BB233E175200A4B60B /* Utiles */,
 				62F2ED62207E995800ED3E63 /* AppDelegate.swift */,
 				62F2ED69207E995A00ED3E63 /* Assets.xcassets */,
 				62F2ED6B207E995A00ED3E63 /* LaunchScreen.storyboard */,
@@ -95,6 +98,14 @@
 				62062501207F6220004A6970 /* Concentration.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		AF18C8BB233E175200A4B60B /* Utiles */ = {
+			isa = PBXGroup;
+			children = (
+				AF18C8BC233E176400A4B60B /* extensiopns.swift */,
+			);
+			path = Utiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -168,6 +179,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF18C8BD233E176400A4B60B /* extensiopns.swift in Sources */,
 				62BC39E9208B7601007C1FAD /* ConcentrationThemeViewController.swift in Sources */,
 				62F2ED65207E995800ED3E63 /* ConcentrationViewController.swift in Sources */,
 				62062502207F6220004A6970 /* Concentration.swift in Sources */,

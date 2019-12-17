@@ -14,9 +14,11 @@ struct Card: Hashable {
     var isMatched = false
     private let identifier: Int
     
-    var hashValue: Int {return identifier}
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(identifier)
+    }
     
-    static func ==(lhs: Card, rhs: Card) -> Bool{
+    static func == (lhs: Card, rhs: Card) -> Bool {
         return lhs.identifier == rhs.identifier
     }
     
